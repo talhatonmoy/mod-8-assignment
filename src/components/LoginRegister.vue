@@ -92,8 +92,8 @@ function changeForm() {
         Doesn't Match</p>
     </div>
     <div class="flex items-center justify-between">
-      <button @click="saveData()"
-        class="bg-orange-600 focus:outline-none border-none hover:bg-orange-700 text-white font-bold py-2 px-4 rounded "
+      <button :disabled="(formData.password != formData.confirmPassword) ? true : false" @click="saveData()"
+        class="bg-orange-600 disabled:bg-gray-500 focus:outline-none border-none hover:bg-orange-700 text-white font-bold py-2 px-4 rounded "
         type="button">
         Register
       </button>
